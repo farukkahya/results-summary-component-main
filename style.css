@@ -1,0 +1,220 @@
+@font-face {
+	font-family: HankenGroesk;
+	src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+	/* colors start */
+	--light-red: hsl(0, 100%, 67%);
+	--orangey-yellow: hsl(39, 100%, 56%);
+	--green-teal: hsl(166, 100%, 37%);
+	--cobalt-blue: hsl(234, 85%, 45%);
+	--light-slate-blue: hsl(252, 100%, 67%);
+	--light-royal-blue: hsl(241, 81%, 54%);
+	--violet-blue: hsla(256, 72%, 46%, 1);
+	--persion-blue: hsla(241, 72%, 46%, 0);
+	--white: hsl(0, 0%, 100%);
+	--pale-blue: hsl(221, 100%, 96%);
+	--light-lavender: hsl(241, 100%, 89%);
+	--dark-gray-blue: hsl(224, 30%, 27%);
+	/* colors end */
+	/* sizes start */
+	--paragraph-size: 18px;
+	--weights-sm: 500;
+	--weights-md: 700;
+	--weights-lg: 800;
+	/* sizes end */
+	/* icons start */
+	--icon-memory: url("/assets/images/icon-memory.svg");
+	--icon-reaction: url("/assets/images/icon-reaction.svg");
+	--icon-verbal: url("/assets/images/icon-verbal.svg");
+	--icon-visual: url("/assets/images/icon-visual.svg");
+	/* icons end */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: HankenGroesk, sans-serif;
+}
+
+p {
+	font-size: var(--paragraph-size);
+}
+
+.container {
+	width: 100%;
+	height: 100svh;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	max-width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 10px 10px 30px var(--pale-blue);
+	border-radius: 2rem;
+}
+.card-left {
+	width: 400px;
+	height: 500px;
+	background: linear-gradient(
+		180deg,
+		var(--light-slate-blue),
+		var(--light-royal-blue)
+	);
+	padding: 20px;
+	margin-right: 1rem;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	color: var(--light-lavender);
+}
+.card-title {
+	font-weight: var(--weights-lg);
+	font-size: 1.4rem;
+}
+.result {
+	background-color: var(--light-royal-blue);
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.result .score {
+	color: var(--white);
+	font-size: 5rem;
+}
+.result p {
+	font-weight: var(--weights-md);
+	color: var(--light-lavender);
+}
+.card-message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.card-message h1 {
+	margin-bottom: 1rem;
+	color: var(--white);
+}
+.card-message p {
+	text-align: center;
+	width: 16rem;
+}
+
+.card-right {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+.card-right h1 {
+	color: var(--dark-gray-blue);
+	font-weight: var(--weights-lg);
+}
+.card-right button {
+	outline: none;
+	border: none;
+	font-size: 1.3rem;
+	font-weight: var(--weights-md);
+	width: 100%;
+	padding: 1.1rem;
+	border-radius: 25px;
+	background-color: var(--dark-gray-blue);
+	color: var(--pale-blue);
+	cursor: pointer;
+}
+.card-right button:hover,
+.card-right button:focus {
+	background-color: hsla(224, 30%, 27%, 0.8);
+}
+.partition {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1.2rem;
+	padding: 0.9rem 1rem;
+	border-radius: 10px;
+}
+.partition .text {
+	display: flex;
+	gap: 5px;
+	font-weight: var(--weights-lg);
+}
+.partition-score {
+	color: var(--dark-gray-blue);
+	font-weight: var(--weights-md);
+}
+.partition-score span {
+	font-weight: var(--weights-lg);
+}
+.partition:nth-child(2) {
+	color: var(--light-red);
+	background-color: hsla(0, 100%, 67%, 0.1);
+}
+.partition:nth-child(3) {
+	color: var(--orangey-yellow);
+	background-color: hsla(39, 100%, 56%, 0.1);
+}
+.partition:nth-child(4) {
+	color: var(--green-teal);
+	background-color: hsla(166, 100%, 37%, 0.1);
+}
+.partition:nth-child(5) {
+	color: var(--cobalt-blue);
+	background-color: hsla(234, 85%, 45%, 0.1);
+	margin-bottom: 2rem;
+}
+@media (max-width: 375px) {
+	
+	.container {
+		width: 90svw;
+		height: 100svh;
+		margin: 0;
+		display: block;
+	}
+	.card {
+		width: 100svw;
+		display: block;
+		box-shadow: none;
+	}
+	.card-left {
+		width: 100vw;
+		margin: 0;
+		border-radius: 0 0 2rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		color: var(--light-lavender);
+	}
+	.result {
+		width: 12rem;
+		height: 12rem;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.card-right {
+		width: 100vw;
+
+		display: flex;
+		flex-direction: column;
+	}
+}
