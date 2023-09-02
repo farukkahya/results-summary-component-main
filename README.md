@@ -25,15 +25,18 @@ Users should be able to:
 
 ### Screenshot
 Desktop View
+
 ![desktop-screenshot](./assets/images/desktop-screenshot.png)
+
 Mobile View
-![mobile-screenshot](./assets/images/mobile-screenshot.png)
+
+![mobile-screenshot](./assets/images/mobile-screeshot.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution is here.](https://www.frontendmentor.io/solutions/resultssummarycomponentmain-gSomxEeOFf)
+- Live Site URL: [Live demo is here.](https://main--illustrious-cuchufli-7885b1.netlify.app/)
 
 ## My process
 
